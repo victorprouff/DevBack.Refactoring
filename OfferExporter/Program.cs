@@ -83,7 +83,8 @@ static async Task<List<GetAllOffersResultRow>> ReadDataFromDatabse(string dbFile
                         SellerIsActive = reader.GetBoolean(reader.GetOrdinal("SellerIsActive")),
                         PromotionId = reader.IsDBNull("PromotionId") ? null : reader.GetInt32(reader.GetOrdinal("PromotionId")),
                         PromotionReducedPrice = reader.IsDBNull("PromotionReducedPrice") ? null : reader.GetDecimal(reader.GetOrdinal("PromotionReducedPrice")),
-                        PromotionTargetId = reader.IsDBNull("PromotionTargetId") ? null : reader.GetByte(reader.GetOrdinal("PromotionTargetId"))
+                        PromotionTargetId = reader.IsDBNull("PromotionTargetId") ? null : reader.GetByte(reader.GetOrdinal("PromotionTargetId")),
+                        PromotionTargetName = reader.IsDBNull("PromotionTargetName") ? null : reader.GetString(reader.GetOrdinal("PromotionTargetName"))
                     };
                     rows.Add(row);
                 }
@@ -210,7 +211,8 @@ static List<Product> BuildProducts(List<GetAllOffersResultRow> rows)
             Company = row.SellerName,
             Price = row.OfferPrice,
             ReducedPrice = row.PromotionReducedPrice,
-            Quantity = row.OfferQuantity
+            Quantity = row.OfferQuantity,
+            DiscountFor = row.PromotionTargetName
         });
 
         if (m == (rows.Count - 1))

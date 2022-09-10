@@ -18,5 +18,8 @@ namespace OfferExporter
 
         [DataMember(Name = "qty")]
         public int Quantity { get; set; }
+
+        [DataMember(Name = "discountFor")]
+        public string? DiscountFor { get; set; }
     }
 }

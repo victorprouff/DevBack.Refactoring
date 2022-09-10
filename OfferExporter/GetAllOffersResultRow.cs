@@ -19,5 +19,6 @@
         public int? PromotionId { get; set; } // Quick-fix: 'init' has been changed by 'set' so we can set the value to null
         public decimal? PromotionReducedPrice { get; set; } // Quick-fix: idem
         public byte? PromotionTargetId { get; set; } // Quick-fix: idem
+        public string? PromotionTargetName { get; init; }
     }
 }
