@@ -155,7 +155,6 @@ static void CompressTheFiles(List<string> offersJson)
     {
         var jsonFileName = Path.GetFileName(jsonFile);
         var gZipFile = jsonFile + ".gz";
-        var md5File = gZipFile + ".md5";
 
         try
         {
@@ -225,7 +224,6 @@ static void CleanUp(List<string> offersJson)
                 continue;
             }
 
-            var gZipFileInfo = new FileInfo(gZipFile);
             if (gZipFile.Length == 0)
             {
                 continue;
