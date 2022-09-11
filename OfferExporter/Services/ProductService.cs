@@ -4,7 +4,30 @@ public class ProductService
 {
     public List<Product> BuildProducts(List<GetAllOffersResultRow> rows)
     {
-        var products = rows.Select(CreateProduct).Distinct().ToList();
+        var products = new List<Product>();
+
+        // var products = rows.Distinct().Select(CreateProduct).ToList();
+
+        // foreach (var row in rows.Distinct())
+        // {
+        //     var product = CreateProduct(row);
+        //
+        //     products.Add(product);
+        // }
+
+        foreach (var t in rows.Distinct())
+        {
+            var product = CreateProduct(t);
+
+            // 
+            var found = products.FirstOrDefault(p => product.Equals(p));
+            if (found is not null)
+            {
+                continue;
+            }
+
+            products.Add(product);
+        }
 
         products.Add(products.Last());
 
