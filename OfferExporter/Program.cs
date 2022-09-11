@@ -73,24 +73,22 @@ static async Task<List<GetAllOffersResultRow>> ReadDataFromDatabse(string dbFile
             {
                 while (await reader.ReadAsync())
                 {
-                    var row = new GetAllOffersResultRow
-                    {
-                        ProductPrid = reader.GetInt32(reader.GetOrdinal("ProductPrid")),
-                        ReferentialId = reader.GetByte(reader.GetOrdinal("ReferentialId")),
-                        ReferentialName = reader.GetString(reader.GetOrdinal("ReferentialName")),
-                        ReferentialIsExportable = reader.GetBoolean(reader.GetOrdinal("ReferentialIsExportable")),
-                        OfferId = reader.GetInt32(reader.GetOrdinal("OfferId")),
-                        OfferIsActive = reader.GetBoolean(reader.GetOrdinal("OfferIsActive")),
-                        OfferPrice = reader.GetDecimal(reader.GetOrdinal("OfferPrice")),
-                        OfferQuantity = reader.GetInt16(reader.GetOrdinal("OfferQuantity")),
-                        SellerId = reader.GetInt32(reader.GetOrdinal("SellerId")),
-                        SellerName = reader.GetString(reader.GetOrdinal("SellerName")),
-                        SellerIsActive = reader.GetBoolean(reader.GetOrdinal("SellerIsActive")),
-                        PromotionId = reader.IsDBNull("PromotionId") ? null : reader.GetInt32(reader.GetOrdinal("PromotionId")),
-                        PromotionReducedPrice = reader.IsDBNull("PromotionReducedPrice") ? null : reader.GetDecimal(reader.GetOrdinal("PromotionReducedPrice")),
-                        PromotionTargetId = reader.IsDBNull("PromotionTargetId") ? null : reader.GetByte(reader.GetOrdinal("PromotionTargetId")),
-                        PromotionTargetName = reader.IsDBNull("PromotionTargetName") ? null : reader.GetString(reader.GetOrdinal("PromotionTargetName"))
-                    };
+                    var row = new GetAllOffersResultRow(
+                        reader.GetInt32(reader.GetOrdinal("ProductPrid")),
+                        reader.GetByte(reader.GetOrdinal("ReferentialId")),
+                        reader.GetString(reader.GetOrdinal("ReferentialName")),
+                        reader.GetBoolean(reader.GetOrdinal("ReferentialIsExportable")),
+                        reader.GetInt32(reader.GetOrdinal("OfferId")),
+                        reader.GetBoolean(reader.GetOrdinal("OfferIsActive")),
+                        reader.GetDecimal(reader.GetOrdinal("OfferPrice")),
+                        reader.GetInt16(reader.GetOrdinal("OfferQuantity")),
+                        reader.GetInt32(reader.GetOrdinal("SellerId")),
+                        reader.GetString(reader.GetOrdinal("SellerName")),
+                        reader.GetBoolean(reader.GetOrdinal("SellerIsActive")),
+                        reader.IsDBNull("PromotionId") ? null : reader.GetInt32(reader.GetOrdinal("PromotionId")),
+                        reader.IsDBNull("PromotionReducedPrice") ? null : reader.GetDecimal(reader.GetOrdinal("PromotionReducedPrice")),
+                        reader.IsDBNull("PromotionTargetId") ? null : reader.GetByte(reader.GetOrdinal("PromotionTargetId")),
+                        reader.IsDBNull("PromotionTargetName") ? null : reader.GetString(reader.GetOrdinal("PromotionTargetName")));
                     rows.Add(row);
                 }
             }

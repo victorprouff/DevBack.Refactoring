@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OfferExporter.Services;
+﻿namespace OfferExporter.Services;
 
 public class RowService
 {
@@ -38,9 +32,7 @@ public class RowService
                 // Quick-fix: when incoherent promotion we ignore it
                 if (row.OfferPrice <= row.PromotionReducedPrice)
                 {
-                    row.PromotionId = null;
-                    row.PromotionReducedPrice = null;
-                    row.PromotionTargetId = null;
+                    row.SetPromotionToNull();
                 }
             }
 
