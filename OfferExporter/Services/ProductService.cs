@@ -17,16 +17,16 @@ public class ProductService
                 ReferentialName = row.ReferentialName
             };
 
+            // 
             var found = products.FirstOrDefault(p => product.Equals(p));
             if (found is not null)
             {
-                product = found;
-            }
-            else
-            {
-                products.Add(product);
+                continue;
             }
 
+            products.Add(product);
+
+            // 
             product.Offers.Add(new Offer
             {
                 Id = row.OfferId,
@@ -37,7 +37,8 @@ public class ProductService
                 DiscountFor = row.PromotionTargetName
             });
 
-            if (m == (rows.Count - 1))
+            // 
+            if (m == rows.Count - 1)
             {
                 products.Add(product);
             }
