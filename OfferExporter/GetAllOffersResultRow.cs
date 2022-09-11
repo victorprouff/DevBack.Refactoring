@@ -50,16 +50,9 @@
         public int SellerId { get; }
         public string SellerName { get; }
         public bool SellerIsActive { get; }
-        public int? PromotionId { get; private set; } // Quick-fix: 'init' has been changed by 'set' so we can set the value to null
-        public decimal? PromotionReducedPrice { get; private set; } // Quick-fix: idem
-        public byte? PromotionTargetId { get; private set; } // Quick-fix: idem
+        public int? PromotionId { get; }
+        public decimal? PromotionReducedPrice { get; }
+        public byte? PromotionTargetId { get; }
         public string? PromotionTargetName { get; }
-
-        public void SetPromotionToNull()
-        {
-            PromotionId = null;
-            PromotionReducedPrice = null;
-            PromotionTargetId = null;
-        }
     }
 }
