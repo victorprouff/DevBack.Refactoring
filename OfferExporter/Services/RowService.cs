@@ -49,20 +49,14 @@ public class RowService
                 rows.Remove(row);
                 continue;
             }
-        }
 
-        // Filter on seller data
-        for (int j = rows.Count - 1; j >= 0; j--)
-        {
-            var row = rows[j];
+            // Filter on seller data
             if (!row.SellerIsActive)
+            {
                 rows.Remove(row);
-        }
+            }
 
-        // Filter on referential data
-        for (int k = rows.Count - 1; k >= 0; k--)
-        {
-            var row = rows[k];
+            // Filter on referential data
             if (!row.ReferentialIsExportable)
             {
                 rows.Remove(row);
