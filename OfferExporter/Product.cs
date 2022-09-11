@@ -4,17 +4,24 @@ namespace OfferExporter
 {
     public class Product
     {
+        public Product(int prid, int referentialId, string referentialName)
+        {
+            Prid = prid;
+            ReferentialId = referentialId;
+            ReferentialName = referentialName;
+        }
+
         [DataMember(Name = "prid")]
-        public string Key { get => $"{ReferentialId}-{Prid}"; }
+        public string Key => $"{ReferentialId}-{Prid}";
 
         [IgnoreDataMember]
-        public int Prid { get; set; }
+        public int Prid { get; }
 
         [IgnoreDataMember]
-        public int ReferentialId { get; set; }
+        public int ReferentialId { get; }
 
         [IgnoreDataMember]
-        public string ReferentialName { get; set; }
+        public string ReferentialName { get; }
 
         [DataMember(Name = "offers")]
         public IList<Offer> Offers { get; set; } = new List<Offer>();
@@ -22,8 +29,8 @@ namespace OfferExporter
         public override bool Equals(object? obj)
         {
             return obj is Product product
-                && product.Prid == Prid
-                && product.ReferentialId == ReferentialId;
+                   && product.Prid == Prid
+                   && product.ReferentialId == ReferentialId;
         }
 
         public override int GetHashCode()

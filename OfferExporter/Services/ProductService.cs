@@ -4,46 +4,14 @@ public class ProductService
 {
     public List<Product> BuildProducts(List<GetAllOffersResultRow> rows)
     {
-        /* var products = new List<Product>();
-
-         // var products = rows.Distinct().Select(CreateProduct).ToList();
-
-         // foreach (var row in rows.Distinct())
-         // {
-         //     var product = CreateProduct(row);
-         //
-         //     products.Add(product);
-         // }
-
-         foreach (var t in rows.Distinct())
-         {
-             var product = CreateProduct(t);
-
-             // 
-             if (products.Exists(p => p.Equals(product)))
-             {
-                 continue;
-             }
-
-             products.Add(product);
-         }
-
-         products.Add(products.Last()); */
-
         var products = new List<Product>();
 
-        for (int m = 0; m < rows.Count; m++)
+        for (var m = 0; m < rows.Count; m++)
         {
             var row = rows[m];
 
-            var product = new Product
-            {
-                Prid = row.ProductPrid,
-                ReferentialId = row.ReferentialId,
-                ReferentialName = row.ReferentialName
-            };
+            var product = new Product(row.ProductPrid, row.ReferentialId, row.ReferentialName);
 
-            // 
             var found = products.FirstOrDefault(p => product.Equals(p));
             if (found is not null)
             {
@@ -64,7 +32,6 @@ public class ProductService
                 DiscountFor = row.PromotionTargetName
             });
 
-            // 
             if (m == rows.Count - 1)
             {
                 products.Add(product);
