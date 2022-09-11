@@ -1,14 +1,13 @@
 using FluentAssertions;
-using OfferExporter.Services;
 
-namespace OfferExporter.Tests.Services;
+namespace OfferExporter.Tests.Services.RowService;
 
 public class RemoveInvalidRowsShould
 {
     [Fact]
-    public void RemoveInvalidRowsReturnOfferIsActive()
+    public void ReturnOfferIsActive()
     {
-        var service = new RowService();
+        var service = new OfferExporter.Services.RowService();
 
         var offersRow = new List<GetAllOffersResultRow>
         {
@@ -41,9 +40,9 @@ public class RemoveInvalidRowsShould
     }
 
     [Fact]
-    public void RemoveInvalidRowsReturnOfferPricePositive()
+    public void ReturnOfferPricePositive()
     {
-        var service = new RowService();
+        var service = new OfferExporter.Services.RowService();
 
         var offersRow = new List<GetAllOffersResultRow>
         {
@@ -76,9 +75,9 @@ public class RemoveInvalidRowsShould
     }
 
     [Fact]
-    public void RemoveInvalidRowsReturnPromotionReducedPricePositiveWhenNotNull()
+    public void PromotionReducedPricePositiveWhenNotNull()
     {
-        var service = new RowService();
+        var service = new OfferExporter.Services.RowService();
 
         var offersRow = new List<GetAllOffersResultRow>
         {
@@ -129,9 +128,9 @@ public class RemoveInvalidRowsShould
     }
 
     [Fact]
-    public void RemoveInvalidRowsReturnOfferQuantityPositive()
+    public void ReturnOfferQuantityPositive()
     {
-        var service = new RowService();
+        var service = new OfferExporter.Services.RowService();
 
         var offersRow = new List<GetAllOffersResultRow>
         {
@@ -164,9 +163,9 @@ public class RemoveInvalidRowsShould
     }
 
     [Fact]
-    public void RemoveInvalidRowsReturnSellerIsActivePositive()
+    public void ReturnSellerIsActivePositive()
     {
-        var service = new RowService();
+        var service = new OfferExporter.Services.RowService();
 
         var offersRow = new List<GetAllOffersResultRow>
         {
@@ -199,9 +198,9 @@ public class RemoveInvalidRowsShould
     }
 
     [Fact]
-    public void RemoveInvalidRowsReturnReferentialIsExportable()
+    public void ReturnReferentialIsExportable()
     {
-        var service = new RowService();
+        var service = new OfferExporter.Services.RowService();
 
         var offersRow = new List<GetAllOffersResultRow>
         {
@@ -234,9 +233,9 @@ public class RemoveInvalidRowsShould
     }
 
     [Fact]
-    public void RemoveInvalidRowsReturnNotReferentialIdEqualTwo()
+    public void ReturnNotReferentialIdEqualTwo()
     {
-        var service = new RowService();
+        var service = new OfferExporter.Services.RowService();
 
         var offersRow = new List<GetAllOffersResultRow>
         {
