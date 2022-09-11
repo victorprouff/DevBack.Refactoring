@@ -68,14 +68,6 @@ public class RowService
                 rows.Remove(row);
                 continue;
             }
-
-            // Quick-fix: Exclude Darty referential (ID 2)
-            // TODO: Update 'IsExportable' in the table dbo.Referential, then remove this dirty code !
-            if (row.ReferentialId == 2)
-            {
-                rows.Remove(row);
-                continue;
-            }
         }
 
         Console.WriteLine($"{DateTime.Now.ToString("HH:mm:ss.fff")} Exclude invalid offers: {rows.Count} left");
