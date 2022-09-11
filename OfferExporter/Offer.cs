@@ -16,10 +16,10 @@ namespace OfferExporter
         [DataMember(Name = "reducedPrice")]
         public decimal? ReducedPrice { get; set; }
 
-        [DataMember(Name = "qty")]
-        public int Quantity { get; set; }
-
         [DataMember(Name = "discountFor")]
         public string? DiscountFor { get; set; }
+
+        [DataMember(Name = "qty")]
+        public int Quantity { get; set; }
     }
 }
