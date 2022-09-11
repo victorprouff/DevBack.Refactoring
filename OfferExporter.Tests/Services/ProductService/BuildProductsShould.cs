@@ -10,12 +10,22 @@ public class BuildProductsShould
         var service = new OfferExporter.Services.ProductService();
         var rows = new List<GetAllOffersResultRow>
         {
-            new()
-            {
-                ProductPrid = 2515866, ReferentialId = 1, ReferentialName = "Fnac", ReferentialIsExportable = true, OfferId = 1499665, OfferIsActive = true, OfferPrice = 20.04M,
-                OfferQuantity = 10, SellerId = 284, SellerName = "Inandout_Dist", SellerIsActive = true, PromotionId = 775, PromotionReducedPrice = 18.04M, PromotionTargetId = 1,
-                PromotionTargetName = "Public"
-            }
+            new(
+                2515866,
+                1,
+                "Fnac",
+                true,
+                1499665,
+                true,
+                20.04M,
+                10,
+                284,
+                "Inandout_Dist",
+                true,
+                775,
+                18.04M,
+                1,
+                "Public")
         };
 
         var expectedProducts = new List<Product>
@@ -39,24 +49,53 @@ public class BuildProductsShould
         var service = new OfferExporter.Services.ProductService();
         var rows = new List<GetAllOffersResultRow>
         {
-            new()
-            {
-                ProductPrid = 2515866, ReferentialId = 1, ReferentialName = "Fnac", ReferentialIsExportable = true, OfferId = 1499665, OfferIsActive = true, OfferPrice = 20.04M,
-                OfferQuantity = 10, SellerId = 284, SellerName = "Inandout_Dist", SellerIsActive = true, PromotionId = 775, PromotionReducedPrice = 18.04M, PromotionTargetId = 1,
-                PromotionTargetName = "Public"
-            },
-            new()
-            {
-                ProductPrid = 2515865, ReferentialId = 1, ReferentialName = "Fnac", ReferentialIsExportable = true, OfferId = 1499666, OfferIsActive = true, OfferPrice = 20.04M,
-                OfferQuantity = 10, SellerId = 284, SellerName = "Inandout_Dist", SellerIsActive = true, PromotionId = 775, PromotionReducedPrice = null, PromotionTargetId = 1,
-                PromotionTargetName = "Public"
-            },
-            new()
-            {
-                ProductPrid = 2611403, ReferentialId = 3, ReferentialName = "Fnac", ReferentialIsExportable = true, OfferId = 2776585, OfferIsActive = true, OfferPrice = 10,
-                OfferQuantity = 10, SellerId = 3724, SellerName = "MyUnivers", SellerIsActive = true, PromotionId = 32, PromotionReducedPrice = 18.04M, PromotionTargetId = 1,
-                PromotionTargetName = "Public"
-            }
+            new(2515866,
+                1,
+                "Fnac",
+                true,
+                1499665,
+                true,
+                20.04M,
+                10,
+                284,
+                "Inandout_Dist",
+                true,
+                775,
+                18.04M,
+                1,
+                "Public"),
+            new(
+                2515865,
+                1,
+                "Fnac",
+                true,
+                1499666,
+                true,
+                20.04M,
+                10,
+                284,
+                "Inandout_Dist",
+                true,
+                775,
+                null,
+                1,
+                "Public"),
+            new(
+                2611403,
+                3,
+                "Fnac",
+                true,
+                2776585,
+                true,
+                10,
+                10,
+                3724,
+                "MyUnivers",
+                true,
+                32,
+                18.04M,
+                1,
+                "Public")
         };
 
         var expectedProducts = new List<Product>
@@ -88,30 +127,70 @@ public class BuildProductsShould
         var service = new OfferExporter.Services.ProductService();
         var rows = new List<GetAllOffersResultRow>
         {
-            new()
-            {
-                ProductPrid = 2515866, ReferentialId = 1, ReferentialName = "Fnac", ReferentialIsExportable = true, OfferId = 1499665, OfferIsActive = true, OfferPrice = 20.04M,
-                OfferQuantity = 10, SellerId = 284, SellerName = "Inandout_Dist", SellerIsActive = true, PromotionId = 775, PromotionReducedPrice = 18.04M, PromotionTargetId = 1,
-                PromotionTargetName = "Public"
-            },
-            new()
-            {
-                ProductPrid = 2515865, ReferentialId = 1, ReferentialName = "Fnac", ReferentialIsExportable = true, OfferId = 1499666, OfferIsActive = true, OfferPrice = 20.04M,
-                OfferQuantity = 10, SellerId = 284, SellerName = "Inandout_Dist", SellerIsActive = true, PromotionId = 775, PromotionReducedPrice = null, PromotionTargetId = 1,
-                PromotionTargetName = "Public"
-            },
-            new()
-            {
-                ProductPrid = 2515865, ReferentialId = 1, ReferentialName = "Fnac", ReferentialIsExportable = true, OfferId = 1499667, OfferIsActive = true, OfferPrice = 25.04M,
-                OfferQuantity = 5, SellerId = 284, SellerName = "Inandout_Dist", SellerIsActive = true, PromotionId = 775, PromotionReducedPrice = null, PromotionTargetId = 1,
-                PromotionTargetName = "Public"
-            },
-            new()
-            {
-                ProductPrid = 2611403, ReferentialId = 3, ReferentialName = "Fnac", ReferentialIsExportable = true, OfferId = 2776585, OfferIsActive = true, OfferPrice = 10,
-                OfferQuantity = 10, SellerId = 3724, SellerName = "MyUnivers", SellerIsActive = true, PromotionId = 32, PromotionReducedPrice = 18.04M, PromotionTargetId = 1,
-                PromotionTargetName = "Public"
-            }
+            new(
+                2515866,
+                1,
+                "Fnac",
+                true,
+                1499665,
+                true,
+                20.04M,
+                10,
+                284,
+                "Inandout_Dist",
+                true,
+                775,
+                18.04M,
+                1,
+                "Public"),
+            new(
+                2515865,
+                1,
+                "Fnac",
+                true,
+                1499666,
+                true,
+                20.04M,
+                10,
+                284,
+                "Inandout_Dist",
+                true,
+                775,
+                null,
+                1,
+                "Public"),
+            new(
+                2515865,
+                1,
+                "Fnac",
+                true,
+                1499667,
+                true,
+                25.04M,
+                5,
+                284,
+                "Inandout_Dist",
+                true,
+                775,
+                null,
+                1,
+                "Public"),
+            new(
+                2611403,
+                3,
+                "Fnac",
+                true,
+                2776585,
+                true,
+                10,
+                10,
+                3724,
+                "MyUnivers",
+                true,
+                32,
+                18.04M,
+                1,
+                "Public")
         };
 
         var expectedProducts = new List<Product>

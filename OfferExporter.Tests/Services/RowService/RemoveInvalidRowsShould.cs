@@ -11,28 +11,58 @@ public class RemoveInvalidRowsShould
 
         var offersRow = new List<GetAllOffersResultRow>
         {
-            new()
-            {
-                ProductPrid = 2515866, ReferentialId = 1, ReferentialName = "Fnac", ReferentialIsExportable = true, OfferId = 1499665, OfferIsActive = true, OfferPrice = 20.04M,
-                OfferQuantity = 10, SellerId = 284, SellerName = "Inandout_Dist", SellerIsActive = true, PromotionId = 775, PromotionReducedPrice = 18.04M, PromotionTargetId = 1,
-                PromotionTargetName = "Public"
-            },
-            new()
-            {
-                ProductPrid = 2611403, ReferentialId = 1, ReferentialName = "Fnac", ReferentialIsExportable = true, OfferId = 2776585, OfferIsActive = false, OfferPrice = 10.50M,
-                OfferQuantity = 10, SellerId = 3724, SellerName = "MyUnivers", SellerIsActive = true, PromotionId = null, PromotionReducedPrice = 18.04M, PromotionTargetId = 1,
-                PromotionTargetName = "Public"
-            }
+            new(
+                2515866,
+                1,
+                "Fnac",
+                true,
+                1499665,
+                true,
+                20.04M,
+                10,
+                284,
+                "Inandout_Dist",
+                true,
+                775,
+                18.04M,
+                1,
+                "Public"),
+            new(
+                2611403,
+                1,
+                "Fnac",
+                true,
+                2776585,
+                false,
+                10.50M,
+                10,
+                3724,
+                "MyUnivers",
+                true,
+                null,
+                18.04M,
+                1,
+                "Public")
         };
 
         var expectedOfferRow = new List<GetAllOffersResultRow>
         {
-            new()
-            {
-                ProductPrid = 2515866, ReferentialId = 1, ReferentialName = "Fnac", ReferentialIsExportable = true, OfferId = 1499665, OfferIsActive = true, OfferPrice = 20.04M,
-                OfferQuantity = 10, SellerId = 284, SellerName = "Inandout_Dist", SellerIsActive = true, PromotionId = 775, PromotionReducedPrice = 18.04M, PromotionTargetId = 1,
-                PromotionTargetName = "Public"
-            }
+            new(
+                2515866,
+                1,
+                "Fnac",
+                true,
+                1499665,
+                true,
+                20.04M,
+                10,
+                284,
+                "Inandout_Dist",
+                true,
+                775,
+                18.04M,
+                1,
+                "Public")
         };
 
         var result = service.RemoveInvalidRows(offersRow);
@@ -46,28 +76,58 @@ public class RemoveInvalidRowsShould
 
         var offersRow = new List<GetAllOffersResultRow>
         {
-            new()
-            {
-                ProductPrid = 2515866, ReferentialId = 1, ReferentialName = "Fnac", ReferentialIsExportable = true, OfferId = 1499665, OfferIsActive = true, OfferPrice = 20.04M,
-                OfferQuantity = 10, SellerId = 284, SellerName = "Inandout_Dist", SellerIsActive = true, PromotionId = 775, PromotionReducedPrice = 18.04M, PromotionTargetId = 1,
-                PromotionTargetName = "Public"
-            },
-            new()
-            {
-                ProductPrid = 2611403, ReferentialId = 1, ReferentialName = "Fnac", ReferentialIsExportable = true, OfferId = 2776585, OfferIsActive = false, OfferPrice = 0,
-                OfferQuantity = 10, SellerId = 3724, SellerName = "MyUnivers", SellerIsActive = true, PromotionId = null, PromotionReducedPrice = 18.04M, PromotionTargetId = 1,
-                PromotionTargetName = "Public"
-            }
+            new(
+                2515866,
+                1,
+                "Fnac",
+                true,
+                1499665,
+                true,
+                20.04M,
+                10,
+                284,
+                "Inandout_Dist",
+                true,
+                775,
+                18.04M,
+                1,
+                "Public"),
+            new(
+                2611403,
+                1,
+                "Fnac",
+                true,
+                2776585,
+                false,
+                0,
+                10,
+                3724,
+                "MyUnivers",
+                true,
+                null,
+                18.04M,
+                1,
+                "Public")
         };
 
         var expectedOfferRow = new List<GetAllOffersResultRow>
         {
-            new()
-            {
-                ProductPrid = 2515866, ReferentialId = 1, ReferentialName = "Fnac", ReferentialIsExportable = true, OfferId = 1499665, OfferIsActive = true, OfferPrice = 20.04M,
-                OfferQuantity = 10, SellerId = 284, SellerName = "Inandout_Dist", SellerIsActive = true, PromotionId = 775, PromotionReducedPrice = 18.04M, PromotionTargetId = 1,
-                PromotionTargetName = "Public"
-            }
+            new(
+                2515866,
+                1,
+                "Fnac",
+                true,
+                1499665,
+                true,
+                20.04M,
+                10,
+                284,
+                "Inandout_Dist",
+                true,
+                775,
+                18.04M,
+                1,
+                "Public")
         };
 
         var result = service.RemoveInvalidRows(offersRow);
@@ -81,46 +141,106 @@ public class RemoveInvalidRowsShould
 
         var offersRow = new List<GetAllOffersResultRow>
         {
-            new()
-            {
-                ProductPrid = 2515866, ReferentialId = 1, ReferentialName = "Fnac", ReferentialIsExportable = true, OfferId = 1499665, OfferIsActive = true, OfferPrice = 20.04M,
-                OfferQuantity = 10, SellerId = 284, SellerName = "Inandout_Dist", SellerIsActive = true, PromotionId = 775, PromotionReducedPrice = 18.04M, PromotionTargetId = 1,
-                PromotionTargetName = "Public"
-            },
-            new()
-            {
-                ProductPrid = 2515865, ReferentialId = 1, ReferentialName = "Fnac", ReferentialIsExportable = true, OfferId = 1499666, OfferIsActive = true, OfferPrice = 20.04M,
-                OfferQuantity = 10, SellerId = 284, SellerName = "Inandout_Dist", SellerIsActive = true, PromotionId = 775, PromotionReducedPrice = null, PromotionTargetId = 1,
-                PromotionTargetName = "Public"
-            },
-            new()
-            {
-                ProductPrid = 2611403, ReferentialId = 1, ReferentialName = "Fnac", ReferentialIsExportable = true, OfferId = 2776585, OfferIsActive = true, OfferPrice = 10,
-                OfferQuantity = 10, SellerId = 3724, SellerName = "MyUnivers", SellerIsActive = true, PromotionId = 32, PromotionReducedPrice = 18.04M, PromotionTargetId = 1,
-                PromotionTargetName = "Public"
-            }
+            new(
+                2515866,
+                1,
+                "Fnac",
+                true,
+                1499665,
+                true,
+                20.04M,
+                10,
+                284,
+                "Inandout_Dist",
+                true,
+                775,
+                18.04M,
+                1,
+                "Public"),
+            new(
+                2515865,
+                1,
+                "Fnac",
+                true,
+                1499666,
+                true,
+                20.04M,
+                10,
+                284,
+                "Inandout_Dist",
+                true,
+                775,
+                null,
+                1,
+                "Public"),
+            new(
+                2611403,
+                1,
+                "Fnac",
+                true,
+                2776585,
+                true,
+                10,
+                10,
+                3724,
+                "MyUnivers",
+                true,
+                32,
+                18.04M,
+                1,
+                "Public")
         };
 
         var expectedOfferRow = new List<GetAllOffersResultRow>
         {
-            new()
-            {
-                ProductPrid = 2515866, ReferentialId = 1, ReferentialName = "Fnac", ReferentialIsExportable = true, OfferId = 1499665, OfferIsActive = true, OfferPrice = 20.04M,
-                OfferQuantity = 10, SellerId = 284, SellerName = "Inandout_Dist", SellerIsActive = true, PromotionId = 775, PromotionReducedPrice = 18.04M, PromotionTargetId = 1,
-                PromotionTargetName = "Public"
-            },
-            new()
-            {
-                ProductPrid = 2515865, ReferentialId = 1, ReferentialName = "Fnac", ReferentialIsExportable = true, OfferId = 1499666, OfferIsActive = true, OfferPrice = 20.04M,
-                OfferQuantity = 10, SellerId = 284, SellerName = "Inandout_Dist", SellerIsActive = true, PromotionId = 775, PromotionReducedPrice = null, PromotionTargetId = 1,
-                PromotionTargetName = "Public"
-            },
-            new()
-            {
-                ProductPrid = 2611403, ReferentialId = 1, ReferentialName = "Fnac", ReferentialIsExportable = true, OfferId = 2776585, OfferIsActive = true, OfferPrice = 10,
-                OfferQuantity = 10, SellerId = 3724, SellerName = "MyUnivers", SellerIsActive = true, PromotionId = null, PromotionReducedPrice = null, PromotionTargetId = null,
-                PromotionTargetName = "Public"
-            }
+            new(
+                2515866,
+                1,
+                "Fnac",
+                true,
+                1499665,
+                true,
+                20.04M,
+                10,
+                284,
+                "Inandout_Dist",
+                true,
+                775,
+                18.04M,
+                1,
+                "Public"),
+            new(
+                2515865,
+                1,
+                "Fnac",
+                true,
+                1499666,
+                true,
+                20.04M,
+                10,
+                284,
+                "Inandout_Dist",
+                true,
+                775,
+                null,
+                1,
+                "Public"),
+            new(
+                2611403,
+                1,
+                "Fnac",
+                true,
+                2776585,
+                true,
+                10,
+                10,
+                3724,
+                "MyUnivers",
+                true,
+                null,
+                null,
+                null,
+                "Public")
         };
 
         var result = service.RemoveInvalidRows(offersRow);
@@ -134,28 +254,58 @@ public class RemoveInvalidRowsShould
 
         var offersRow = new List<GetAllOffersResultRow>
         {
-            new()
-            {
-                ProductPrid = 2515866, ReferentialId = 1, ReferentialName = "Fnac", ReferentialIsExportable = true, OfferId = 1499665, OfferIsActive = true, OfferPrice = 20.04M,
-                OfferQuantity = 10, SellerId = 284, SellerName = "Inandout_Dist", SellerIsActive = true, PromotionId = 775, PromotionReducedPrice = 18.04M, PromotionTargetId = 1,
-                PromotionTargetName = "Public"
-            },
-            new()
-            {
-                ProductPrid = 2611403, ReferentialId = 1, ReferentialName = "Fnac", ReferentialIsExportable = true, OfferId = 2776585, OfferIsActive = false, OfferPrice = 10,
-                OfferQuantity = 0, SellerId = 3724, SellerName = "MyUnivers", SellerIsActive = true, PromotionId = null, PromotionReducedPrice = 18.04M, PromotionTargetId = 1,
-                PromotionTargetName = "Public"
-            }
+            new(
+                2515866,
+                1,
+                "Fnac",
+                true,
+                1499665,
+                true,
+                20.04M,
+                10,
+                284,
+                "Inandout_Dist",
+                true,
+                775,
+                18.04M,
+                1,
+                "Public"),
+            new(
+                2611403,
+                1,
+                "Fnac",
+                true,
+                2776585,
+                false,
+                10,
+                0,
+                3724,
+                "MyUnivers",
+                true,
+                null,
+                18.04M,
+                1,
+                "Public")
         };
 
         var expectedOfferRow = new List<GetAllOffersResultRow>
         {
-            new()
-            {
-                ProductPrid = 2515866, ReferentialId = 1, ReferentialName = "Fnac", ReferentialIsExportable = true, OfferId = 1499665, OfferIsActive = true, OfferPrice = 20.04M,
-                OfferQuantity = 10, SellerId = 284, SellerName = "Inandout_Dist", SellerIsActive = true, PromotionId = 775, PromotionReducedPrice = 18.04M, PromotionTargetId = 1,
-                PromotionTargetName = "Public"
-            }
+            new(
+                2515866,
+                1,
+                "Fnac",
+                true,
+                1499665,
+                true,
+                20.04M,
+                10,
+                284,
+                "Inandout_Dist",
+                true,
+                775,
+                18.04M,
+                1,
+                "Public")
         };
 
         var result = service.RemoveInvalidRows(offersRow);
@@ -169,28 +319,58 @@ public class RemoveInvalidRowsShould
 
         var offersRow = new List<GetAllOffersResultRow>
         {
-            new()
-            {
-                ProductPrid = 2515866, ReferentialId = 1, ReferentialName = "Fnac", ReferentialIsExportable = true, OfferId = 1499665, OfferIsActive = true, OfferPrice = 20.04M,
-                OfferQuantity = 10, SellerId = 284, SellerName = "Inandout_Dist", SellerIsActive = true, PromotionId = 775, PromotionReducedPrice = 18.04M, PromotionTargetId = 1,
-                PromotionTargetName = "Public"
-            },
-            new()
-            {
-                ProductPrid = 2611403, ReferentialId = 1, ReferentialName = "Fnac", ReferentialIsExportable = true, OfferId = 2776585, OfferIsActive = false, OfferPrice = 10,
-                OfferQuantity = 10, SellerId = 3724, SellerName = "MyUnivers", SellerIsActive = false, PromotionId = null, PromotionReducedPrice = 18.04M, PromotionTargetId = 1,
-                PromotionTargetName = "Public"
-            }
+            new(
+                2515866,
+                1,
+                "Fnac",
+                true,
+                1499665,
+                true,
+                20.04M,
+                10,
+                284,
+                "Inandout_Dist",
+                true,
+                775,
+                18.04M,
+                1,
+                "Public"),
+            new(
+                2611403,
+                1,
+                "Fnac",
+                true,
+                2776585,
+                false,
+                10,
+                10,
+                3724,
+                "MyUnivers",
+                false,
+                null,
+                18.04M,
+                1,
+                "Public")
         };
 
         var expectedOfferRow = new List<GetAllOffersResultRow>
         {
-            new()
-            {
-                ProductPrid = 2515866, ReferentialId = 1, ReferentialName = "Fnac", ReferentialIsExportable = true, OfferId = 1499665, OfferIsActive = true, OfferPrice = 20.04M,
-                OfferQuantity = 10, SellerId = 284, SellerName = "Inandout_Dist", SellerIsActive = true, PromotionId = 775, PromotionReducedPrice = 18.04M, PromotionTargetId = 1,
-                PromotionTargetName = "Public"
-            }
+            new(
+                2515866,
+                1,
+                "Fnac",
+                true,
+                1499665,
+                true,
+                20.04M,
+                10,
+                284,
+                "Inandout_Dist",
+                true,
+                775,
+                18.04M,
+                1,
+                "Public")
         };
 
         var result = service.RemoveInvalidRows(offersRow);
@@ -204,28 +384,58 @@ public class RemoveInvalidRowsShould
 
         var offersRow = new List<GetAllOffersResultRow>
         {
-            new()
-            {
-                ProductPrid = 2515866, ReferentialId = 1, ReferentialName = "Fnac", ReferentialIsExportable = true, OfferId = 1499665, OfferIsActive = true, OfferPrice = 20.04M,
-                OfferQuantity = 10, SellerId = 284, SellerName = "Inandout_Dist", SellerIsActive = true, PromotionId = 775, PromotionReducedPrice = 18.04M, PromotionTargetId = 1,
-                PromotionTargetName = "Public"
-            },
-            new()
-            {
-                ProductPrid = 2611403, ReferentialId = 1, ReferentialName = "Fnac", ReferentialIsExportable = false, OfferId = 2776585, OfferIsActive = false, OfferPrice = 10,
-                OfferQuantity = 10, SellerId = 3724, SellerName = "MyUnivers", SellerIsActive = true, PromotionId = null, PromotionReducedPrice = 18.04M, PromotionTargetId = 1,
-                PromotionTargetName = "Public"
-            }
+            new(
+                2515866,
+                1,
+                "Fnac",
+                true,
+                1499665,
+                true,
+                20.04M,
+                10,
+                284,
+                "Inandout_Dist",
+                true,
+                775,
+                18.04M,
+                1,
+                "Public"),
+            new(
+                2611403,
+                1,
+                "Fnac",
+                false,
+                2776585,
+                false,
+                10,
+                10,
+                3724,
+                "MyUnivers",
+                true,
+                null,
+                18.04M,
+                1,
+                "Public")
         };
 
         var expectedOfferRow = new List<GetAllOffersResultRow>
         {
-            new()
-            {
-                ProductPrid = 2515866, ReferentialId = 1, ReferentialName = "Fnac", ReferentialIsExportable = true, OfferId = 1499665, OfferIsActive = true, OfferPrice = 20.04M,
-                OfferQuantity = 10, SellerId = 284, SellerName = "Inandout_Dist", SellerIsActive = true, PromotionId = 775, PromotionReducedPrice = 18.04M, PromotionTargetId = 1,
-                PromotionTargetName = "Public"
-            }
+            new(
+                2515866,
+                1,
+                "Fnac",
+                true,
+                1499665,
+                true,
+                20.04M,
+                10,
+                284,
+                "Inandout_Dist",
+                true,
+                775,
+                18.04M,
+                1,
+                "Public")
         };
 
         var result = service.RemoveInvalidRows(offersRow);
@@ -239,28 +449,58 @@ public class RemoveInvalidRowsShould
 
         var offersRow = new List<GetAllOffersResultRow>
         {
-            new()
-            {
-                ProductPrid = 2515866, ReferentialId = 1, ReferentialName = "Fnac", ReferentialIsExportable = true, OfferId = 1499665, OfferIsActive = true, OfferPrice = 20.04M,
-                OfferQuantity = 10, SellerId = 284, SellerName = "Inandout_Dist", SellerIsActive = true, PromotionId = 775, PromotionReducedPrice = 18.04M, PromotionTargetId = 1,
-                PromotionTargetName = "Public"
-            },
-            new()
-            {
-                ProductPrid = 2611403, ReferentialId = 2, ReferentialName = "Fnac", ReferentialIsExportable = false, OfferId = 2776585, OfferIsActive = false, OfferPrice = 10,
-                OfferQuantity = 10, SellerId = 3724, SellerName = "MyUnivers", SellerIsActive = true, PromotionId = null, PromotionReducedPrice = 18.04M, PromotionTargetId = 1,
-                PromotionTargetName = "Public"
-            }
+            new(
+                2515866,
+                1,
+                "Fnac",
+                true,
+                1499665,
+                true,
+                20.04M,
+                10,
+                284,
+                "Inandout_Dist",
+                true,
+                775,
+                18.04M,
+                1,
+                "Public"),
+            new(
+                2611403,
+                2,
+                "Fnac",
+                false,
+                2776585,
+                false,
+                10,
+                10,
+                3724,
+                "MyUnivers",
+                true,
+                null,
+                18.04M,
+                1,
+                "Public")
         };
 
         var expectedOfferRow = new List<GetAllOffersResultRow>
         {
-            new()
-            {
-                ProductPrid = 2515866, ReferentialId = 1, ReferentialName = "Fnac", ReferentialIsExportable = true, OfferId = 1499665, OfferIsActive = true, OfferPrice = 20.04M,
-                OfferQuantity = 10, SellerId = 284, SellerName = "Inandout_Dist", SellerIsActive = true, PromotionId = 775, PromotionReducedPrice = 18.04M, PromotionTargetId = 1,
-                PromotionTargetName = "Public"
-            }
+            new(
+                2515866,
+                1,
+                "Fnac",
+                true,
+                1499665,
+                true,
+                20.04M,
+                10,
+                284,
+                "Inandout_Dist",
+                true,
+                775,
+                18.04M,
+                1,
+                "Public")
         };
 
         var result = service.RemoveInvalidRows(offersRow);
