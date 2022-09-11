@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OfferExporter.Services;
 
-internal class RowService
+public class RowService
 {
     public List<GetAllOffersResultRow> RemoveInvalidRows(List<GetAllOffersResultRow> rows)
     {
