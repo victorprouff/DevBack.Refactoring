@@ -120,8 +120,8 @@ public class BuildProductsShould
             },
             new()
             {
-                ProductPrid = 2515865, ReferentialId = 1, ReferentialName = "Fnac", ReferentialIsExportable = true, OfferId = 1499666, OfferIsActive = true, OfferPrice = 20.04M,
-                OfferQuantity = 10, SellerId = 284, SellerName = "Inandout_Dist", SellerIsActive = true, PromotionId = 775, PromotionReducedPrice = null, PromotionTargetId = 1,
+                ProductPrid = 2515865, ReferentialId = 1, ReferentialName = "Fnac", ReferentialIsExportable = true, OfferId = 1499667, OfferIsActive = true, OfferPrice = 25.04M,
+                OfferQuantity = 5, SellerId = 284, SellerName = "Inandout_Dist", SellerIsActive = true, PromotionId = 775, PromotionReducedPrice = null, PromotionTargetId = 1,
                 PromotionTargetName = "Public"
             },
             new()
@@ -146,7 +146,12 @@ public class BuildProductsShould
                 Prid = 2515865,
                 ReferentialId = 1,
                 ReferentialName = "Fnac",
-                Offers = new List<Offer> { new() { Id = 1499666, Company = "Inandout_Dist", Price = 20.04M, ReducedPrice = null, DiscountFor = "Public", Quantity = 10 } }
+                Offers = new List<Offer>
+                { 
+                    new() { Id = 1499666, Company = "Inandout_Dist", Price = 20.04M, ReducedPrice = null, DiscountFor = "Public", Quantity = 10 },
+                    new() { Id = 1499667, Company = "Inandout_Dist", Price = 25.04M, ReducedPrice = null, DiscountFor = "Public", Quantity = 5 }
+
+                }
             },
             new()
             {
