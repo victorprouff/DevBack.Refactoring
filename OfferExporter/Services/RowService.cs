@@ -4,8 +4,15 @@ public class RowService
 {
     public List<GetAllOffersResultRow> RemoveInvalidRows(List<GetAllOffersResultRow> rows)
     {
-        // Filter on offer data
-        for (int i = rows.Count - 1; i >= 0; i--)
+        var toto = rows.Where(r =>
+            r.OfferIsActive &&
+            r.OfferPrice <= 0 &&
+            r.OfferQuantity <= 0 &&
+            r.SellerIsActive &&
+            r.ReferentialIsExportable &&
+            r.PromotionReducedPrice is <= 0);
+
+        for (var i = rows.Count - 1; i >= 0; i--)
         {
             var row = rows[i];
 
